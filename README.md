@@ -1,6 +1,8 @@
 # employee_management_be
- 
-Django JWT Authentication base authorization and authentication backend application for employee management platform  
+
+Django JWT Authentication base authorization and authentication backend application for employee management platform
+
+All endpoints can be seen at /api/docs
 
 Install dependencies:
 * sudo apt update

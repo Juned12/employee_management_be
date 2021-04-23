@@ -9,7 +9,7 @@ class UserDetailSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Manager
-        fields = "__all__"
+        fields = ('email', 'first_name', 'last_name')
 
 
 class RegisterManagerSerializer(serializers.ModelSerializer):

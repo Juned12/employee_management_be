@@ -31,6 +31,7 @@ FLUSH PRIVILEGES;
 ```
 
 Rename \settings\config.sample.json to config.json with appropriate values
+Create a folder named logs in the project root directory 
 
 * sudo service mysql restart
 

@@ -39,6 +39,8 @@ class RegisterManagerSerializer(serializers.ModelSerializer):
     def validate(self, attrs):
         if attrs['password'] != attrs['password2']:
             raise serializers.ValidationError({"password": "Password fields didn't match."})
+        if len(attrs['password'])<6:
+            raise serializers.ValidationError({"password": "Minimum 6 Character required."})
         return attrs
 
     def create(self, validated_data):

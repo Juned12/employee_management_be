@@ -10,5 +10,13 @@
     "user": "---user---",
     "password": "---mailgun password---",
     "from": "--from address--"
+  },
+  "database": {
+    "engine": "django.db.backends.mysql",
+    "host": "localhost",
+    "name": "--db_name--",
+    "user": "--user_name--",
+    "password": "--db_pass--",
+    "port": "3306"
   }
 }

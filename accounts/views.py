@@ -58,7 +58,7 @@ class EmployeeView(generics.RetrieveUpdateDestroyAPIView):
 
 
 class ListEmployeeView(generics.ListAPIView):
-    queryset = Employee.objects.all()
+    queryset = Employee.objects.all().order_by('first_name','last_name')
     serializer_class = EmployeeSerializer
     pagination_class = StandardResultsSetPagination
 

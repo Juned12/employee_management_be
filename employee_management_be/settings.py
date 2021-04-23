@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
 from pathlib import Path
+from datetime import timedelta
 
 import datetime
 import json
@@ -136,10 +137,12 @@ LOGGING = {
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'OPTIONS': {
-            'read_default_file': '/etc/mysql/my.cnf',
-        },
+        'ENGINE': ALL_CONFIG['database']['engine'],
+        'NAME': ALL_CONFIG['database']['name'],
+        'USER': ALL_CONFIG['database']['user'],
+        'PASSWORD': ALL_CONFIG['database']['password'],
+        'HOST': ALL_CONFIG['database']['host'],   # Or an IP Address that your DB is hosted on
+        'PORT': ALL_CONFIG['database']['port'],
     }
 }
 
